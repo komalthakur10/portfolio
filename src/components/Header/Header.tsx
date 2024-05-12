@@ -1,5 +1,10 @@
+import { useDispatch, useSelector } from "react-redux";
+import { rootType } from "../../redux/rootReducer";
+import { setTheme } from "../../redux/reducer/themeReducer";
 import { MdLightMode } from "react-icons/md";
 const Header = () => {
+  const dispatch = useDispatch();
+  const { dark }: any = useSelector((state: rootType) => state.theme);
   return (
     <div className="p-4 border-b mx-4">
       <div className="grid lg:grid-cols-2">
@@ -27,7 +32,12 @@ const Header = () => {
                 Contact
               </button>
             </div>
-            <div className="rounded-full bg-white hover:bg-black hover:border w-8 h-8 p-[6px] ">
+            <div
+              className="rounded-full bg-white hover:bg-black hover:border w-8 h-8 p-[6px]"
+              onClick={() => {
+                dispatch(setTheme(!dark));
+              }}
+            >
               <MdLightMode className="text-black hover:text-white" />
             </div>
           </div>
