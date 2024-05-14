@@ -5,13 +5,14 @@ import { rootType } from "../../redux/rootReducer";
 //components
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
+import CustomNavigation from "../CustomNavigation/CustomNavigation";
 
 interface Props {
   children: ReactNode;
 }
 
 const Layout = ({ children }: Props) => {
-  const { dark }: any = useSelector((state: rootType) => state.theme);
+  const { dark } = useSelector((state: rootType) => state.theme);
   return (
     <div
       className={
@@ -21,7 +22,10 @@ const Layout = ({ children }: Props) => {
       }
     >
       <Header />
-      <div>{children}</div>
+      <div className="grid grid-cols-12">
+        <div className="col-span-11">{children}</div>
+        <CustomNavigation />
+      </div>
       <Footer />
     </div>
   );

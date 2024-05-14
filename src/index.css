@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* google font */
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Ubuntu+Mono:wght@700&display=swap");
+
+.ubuntu-mono-regular {
+  font-family: "Ubuntu Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ubuntu-mono-bold {
+  font-family: "Ubuntu Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.text-shadow {
+  text-shadow: 0px 4px 4px #0099ff;
+}

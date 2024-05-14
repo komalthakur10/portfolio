@@ -4,7 +4,7 @@ import { setTheme } from "../../redux/reducer/themeReducer";
 import { MdLightMode } from "react-icons/md";
 const Header = () => {
   const dispatch = useDispatch();
-  const { dark }: any = useSelector((state: rootType) => state.theme);
+  const { dark } = useSelector((state: rootType) => state.theme);
   return (
     <div className="p-4 border-b mx-4">
       <div className="grid lg:grid-cols-2">
