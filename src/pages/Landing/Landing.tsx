@@ -1,6 +1,7 @@
 import About from "../../components/About/About";
 import Home from "../../components/Home/Home";
 import Projects from "../../components/Projects/Projects";
+import Skills from "../../components/Skills/Skills";
 
 const Landing = () => {
   return (
@@ -8,6 +9,7 @@ const Landing = () => {
       <Home />
       <About />
       <Projects />
+      <Skills />
     </div>
   );
 };

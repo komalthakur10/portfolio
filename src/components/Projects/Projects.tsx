@@ -36,7 +36,7 @@ const Projects = () => {
         <div className="mx-10 p-5">
           <img
             src="assets/images/zest-project-img.png"
-            alt="scape-project-images"
+            alt="zest-project-images"
             loading="lazy"
           />
         </div>
@@ -45,7 +45,7 @@ const Projects = () => {
         <div className="mx-10 p-5">
           <img
             src="assets/images/sparky-project-img.png"
-            alt="scape-project-images"
+            alt="sparky-project-images"
             loading="lazy"
           />
         </div>

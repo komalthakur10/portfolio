@@ -14,7 +14,7 @@ const About = () => {
             alt="girl coding"
           />
         </div>
-        <div className="ubuntu-mono-regular px-28 mt-8">
+        <div className="px-28 mt-8">
           <div className=" text-4xl pb-8 flex">
             <MdDoubleArrow className="me-4 mt-1 text-[#4f8aff] " />
             <div>About Me</div>
