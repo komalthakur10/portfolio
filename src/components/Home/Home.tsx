@@ -1,7 +1,7 @@
 import { FiDownload } from "react-icons/fi";
 const Home = () => {
   return (
-    <div className="border border-[#C7CEFE] rounded-lg p-12 ms-48 me-36 lg:mt-20 lg:mb-28 bg-[#5194ff15] h-[65vh] ">
+    <div className="border border-[#C7CEFE] rounded-lg p-12 ms-48 me-36 lg:mt-24 lg:mb-28 bg-[#5194ff15] h-[65vh] ">
       <div className=" my-8 px-24 ">
         <div className="text-4xl pb-4 ">I’m</div>
         <div className="ubuntu-mono-bold text-shadow text-6xl pb-8">

@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode, RefObject } from "react";
 import { useSelector } from "react-redux";
 import { rootType } from "../../redux/rootReducer";
 
@@ -7,12 +7,33 @@ import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import CustomNavigation from "../CustomNavigation/CustomNavigation";
 
-interface Props {
+interface LayoutProps {
   children: ReactNode;
+  homeRef: RefObject<HTMLDivElement>;
+  aboutRef: RefObject<HTMLDivElement>;
+  projectRef: RefObject<HTMLDivElement>;
+  skillRef: RefObject<HTMLDivElement>;
 }
 
-const Layout = ({ children }: Props) => {
+const Layout = ({
+  children,
+  homeRef,
+  aboutRef,
+  projectRef,
+  skillRef,
+}: LayoutProps) => {
   const { dark } = useSelector((state: rootType) => state.theme);
+
+  const scrollToHome = () =>
+    homeRef.current?.scrollIntoView({ behavior: "smooth", block: "end" });
+  const scrollToAbout = () =>
+    aboutRef.current?.scrollIntoView({ behavior: "smooth", block: "end" });
+  const scrollToProject = () => {
+    projectRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+  const scrollToSkill = () =>
+    skillRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+
   return (
     <div
       className={
@@ -21,10 +42,20 @@ const Layout = ({ children }: Props) => {
           : `bg-gradient-to-r from-[#b0c4ff] via-[#7692ff] to-[#4f8aff]`
       }
     >
-      <Header />
+      <Header
+        scrollToHome={scrollToHome}
+        scrollToAbout={scrollToAbout}
+        scrollToProject={scrollToProject}
+        scrollToSkill={scrollToSkill}
+      />
       <div className="grid grid-cols-12">
         <div className="col-span-11">{children}</div>
-        <CustomNavigation />
+        <CustomNavigation
+          scrollToHome={scrollToHome}
+          scrollToAbout={scrollToAbout}
+          scrollToProject={scrollToProject}
+          scrollToSkill={scrollToSkill}
+        />
       </div>
       <Footer />
     </div>

@@ -6,7 +6,7 @@ import { IoLogoGithub } from "react-icons/io";
 const About = () => {
   return (
     <div className="py-4">
-      <div className="grid grid-cols-2 my-24 h-[60vh]">
+      <div className="grid grid-cols-2 mt-24 mb-10 h-[60vh]">
         <div className="">
           <img
             className="w-3/5 mx-auto"

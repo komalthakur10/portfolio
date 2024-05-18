@@ -1,7 +1,7 @@
 const Projects = () => {
   return (
-    <div>
-      <div className="text-3xl my-12 flex justify-center">
+    <div className="pb-8 pt-20">
+      <div className="text-3xl my-12 flex justify-center ">
         <div className="ml-12 border-b pb-2">My Personal Projects</div>
       </div>
       <div className="grid grid-cols-2 mb-10">

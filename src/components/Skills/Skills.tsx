@@ -2,7 +2,7 @@ import { MdDoubleArrow } from "react-icons/md";
 
 const Skills = () => {
   return (
-    <div className="mt-24">
+    <div className="">
       <div className=" text-4xl pb-8 flex ms-24">
         <MdDoubleArrow className="me-4 mt-1 text-[#4f8aff] " />
         <div>Skills</div>
