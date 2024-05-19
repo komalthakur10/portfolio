@@ -22,8 +22,8 @@ const Header = ({
   const { dark } = useSelector((state: rootType) => state.theme);
   return (
     <div
-      className={`p-4 border-b px-4 sticky top-0 ${
-        dark ? "bg-[#020A20]" : "bg-[#040622c2]"
+      className={`z-10 p-4 border-b px-4 sticky top-0 ${
+        dark ? "bg-[#020A20]" : "bg-[#15183ff1]"
       } `}
     >
       <div className="grid lg:grid-cols-2 text-white">
