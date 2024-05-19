@@ -3,6 +3,7 @@ interface CustomNavigationProps {
   scrollToAbout: Function;
   scrollToProject: Function;
   scrollToSkill: Function;
+  active: string | null;
 }
 
 const CustomNavigation = ({
@@ -10,34 +11,51 @@ const CustomNavigation = ({
   scrollToAbout,
   scrollToProject,
   scrollToSkill,
+  active,
 }: CustomNavigationProps) => {
   return (
     <div className=" fixed md:right-10 lg:right-16">
       <div className="flex justify-center mt-36 ">
         <div>
           <div
-            className="rounded-full bg-gradient-to-b from-[#4f8aff] to-[#2c36fc] h-8 w-8"
+            className={
+              active === "Home"
+                ? "rounded-full bg-gradient-to-b from-[#4f8aff] to-[#2c36fc] h-8 w-8"
+                : "rounded-full border-4 border-[#7798FF] h-8 w-8"
+            }
             onClick={() => {
               scrollToHome();
             }}
           ></div>
           <div className="border-e h-20 ps-2 me-[15px]"></div>
           <div
-            className="rounded-full border-4 border-[#7798FF] h-8 w-8"
+            className={
+              active === "About"
+                ? "rounded-full bg-gradient-to-b from-[#4f8aff] to-[#2c36fc] h-8 w-8"
+                : "rounded-full border-4 border-[#7798FF] h-8 w-8"
+            }
             onClick={() => {
               scrollToAbout();
             }}
           ></div>
           <div className="border-e h-20 ps-2 me-[15px]"></div>
           <div
-            className="rounded-full border-4 border-[#7798FF] h-8 w-8"
+            className={
+              active === "Project"
+                ? "rounded-full bg-gradient-to-b from-[#4f8aff] to-[#2c36fc] h-8 w-8"
+                : "rounded-full border-4 border-[#7798FF] h-8 w-8"
+            }
             onClick={() => {
               scrollToProject();
             }}
           ></div>
           <div className="border-e h-20 ps-2 me-[15px]"></div>
           <div
-            className="rounded-full border-4 border-[#7798FF] h-8 w-8"
+            className={
+              active === "Skill"
+                ? "rounded-full bg-gradient-to-b from-[#4f8aff] to-[#2c36fc] h-8 w-8"
+                : "rounded-full border-4 border-[#7798FF] h-8 w-8"
+            }
             onClick={() => {
               scrollToSkill();
             }}

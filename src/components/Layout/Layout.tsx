@@ -13,6 +13,7 @@ interface LayoutProps {
   aboutRef: RefObject<HTMLDivElement>;
   projectRef: RefObject<HTMLDivElement>;
   skillRef: RefObject<HTMLDivElement>;
+  active: string | null;
 }
 
 const Layout = ({
@@ -21,6 +22,7 @@ const Layout = ({
   aboutRef,
   projectRef,
   skillRef,
+  active,
 }: LayoutProps) => {
   const { dark } = useSelector((state: rootType) => state.theme);
 
@@ -47,6 +49,7 @@ const Layout = ({
         scrollToAbout={scrollToAbout}
         scrollToProject={scrollToProject}
         scrollToSkill={scrollToSkill}
+        active={active}
       />
       <div className="grid grid-cols-12">
         <div className="col-span-11">{children}</div>
@@ -55,6 +58,7 @@ const Layout = ({
           scrollToAbout={scrollToAbout}
           scrollToProject={scrollToProject}
           scrollToSkill={scrollToSkill}
+          active={active}
         />
       </div>
       <Footer />

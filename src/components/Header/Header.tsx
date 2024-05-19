@@ -8,6 +8,7 @@ interface HeaderProps {
   scrollToAbout: Function;
   scrollToProject: Function;
   scrollToSkill: Function;
+  active: string | null;
 }
 
 const Header = ({
@@ -15,6 +16,7 @@ const Header = ({
   scrollToAbout,
   scrollToProject,
   scrollToSkill,
+  active,
 }: HeaderProps) => {
   const dispatch = useDispatch();
   const { dark } = useSelector((state: rootType) => state.theme);
@@ -34,7 +36,9 @@ const Header = ({
         <div className="">
           <div className="grid grid-flow-col gap-8 text-xl pt-2 lg:ms-[15rem]">
             <div
-              className="text-center pb-1 hover:border-b-2 hover:border-[#2c36fc]"
+              className={`text-center pb-1 hover:border-b-2 hover:border-[#2c36fc] ${
+                active === "Home" ? "border-b-2 border-[#2c36fc]" : ""
+              }`}
               onClick={() => {
                 scrollToHome();
               }}
@@ -42,7 +46,9 @@ const Header = ({
               Home
             </div>
             <div
-              className="text-center pb-1 hover:border-b-2 hover:border-[#2c36fc]"
+              className={`text-center pb-1 hover:border-b-2 hover:border-[#2c36fc] ${
+                active === "About" ? "border-b-2 border-[#2c36fc]" : ""
+              }`}
               onClick={() => {
                 scrollToAbout();
               }}
@@ -50,7 +56,9 @@ const Header = ({
               About
             </div>
             <div
-              className="text-center pb-1 hover:border-b-2 hover:border-[#2c36fc]"
+              className={`text-center pb-1 hover:border-b-2 hover:border-[#2c36fc] ${
+                active === "Project" ? "border-b-2 border-[#2c36fc]" : ""
+              }`}
               onClick={() => {
                 scrollToProject();
               }}
@@ -58,7 +66,9 @@ const Header = ({
               Projects
             </div>{" "}
             <div
-              className="text-center pb-1 hover:border-b-2 hover:border-[#2c36fc]"
+              className={`text-center pb-1 hover:border-b-2 hover:border-[#2c36fc] ${
+                active === "Skill" ? "border-b-2 border-[#2c36fc]" : ""
+              }`}
               onClick={() => {
                 scrollToSkill();
               }}
