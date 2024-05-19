@@ -27,9 +27,27 @@ const About = () => {
             communication to deliver high-quality solutions.
           </div>
           <div className="flex ps-3 mt-4">
-            <IoMdMail className=" text-[#4f8aff] w-14 h-8 me-4" />
-            <SiLinkedin className=" text-[#4f8aff] w-6 h-6 mt-1 me-6" />
-            <IoLogoGithub className=" text-[#4f8aff] w-7 h-8 " />
+            <a
+              href="mailto:komalthakur100400@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <IoMdMail className=" text-[#4f8aff] w-14 h-8 me-4" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/komal-thakur-40ab06237/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <SiLinkedin className=" text-[#4f8aff] w-6 h-6 mt-1 me-6" />
+            </a>
+            <a
+              href="https://github.com/komalthakur10"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <IoLogoGithub className=" text-[#4f8aff] w-7 h-8 " />
+            </a>
           </div>
         </div>
       </div>

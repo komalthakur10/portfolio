@@ -26,3 +26,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.image-shadow:hover {
+  filter: drop-shadow(3px 5px 2px #3c44b1);
+}

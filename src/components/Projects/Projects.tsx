@@ -6,14 +6,28 @@ const Projects = () => {
       </div>
       <div className="grid grid-cols-2 mb-10">
         <div className="mx-10 p-5">
-          <img
-            src="assets/images/scape-project-img.png"
-            alt="scape-project-images"
-            loading="lazy"
-          />
+          <a
+            href="https://scape-chat.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="assets/images/scape-project-img.png"
+              alt="scape-project-images"
+              loading="lazy"
+            />
+          </a>
         </div>
         <div className="p-5">
-          <div className="text-3xl my-8 ">Scape</div>
+          <div className="text-3xl my-8 ">
+            <a
+              href="https://scape-chat.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Scape
+            </a>
+          </div>
           <div className="text-lg ">
             Built a real-time chat application utilizing Socket.io for instant
             communication, seamlessly integrated within a Next.js and Nest.js
@@ -24,7 +38,15 @@ const Projects = () => {
       </div>
       <div className="grid grid-cols-2 mb-10">
         <div className="px-16 py-5">
-          <div className="text-3xl my-8 ">Zest</div>
+          <div className="text-3xl my-8 ">
+            <a
+              href="https://zest-organic.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Zest
+            </a>
+          </div>
           <div className="text-lg ">
             Built a user-friendly online store for effortless shopping
             experiences. Enabled secure logins, smooth payments, and order
@@ -34,23 +56,43 @@ const Projects = () => {
           </div>
         </div>
         <div className="mx-10 p-5">
-          <img
-            src="assets/images/zest-project-img.png"
-            alt="zest-project-images"
-            loading="lazy"
-          />
+          <a
+            href="https://zest-organic.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="assets/images/zest-project-img.png"
+              alt="zest-project-images"
+              loading="lazy"
+            />
+          </a>
         </div>
       </div>
       <div className="grid grid-cols-2 mb-10">
         <div className="mx-10 p-5">
-          <img
-            src="assets/images/sparky-project-img.png"
-            alt="sparky-project-images"
-            loading="lazy"
-          />
+          <a
+            href="https://sparky-9f2fa.web.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="assets/images/sparky-project-img.png"
+              alt="sparky-project-images"
+              loading="lazy"
+            />
+          </a>
         </div>
         <div className="p-5">
-          <div className="text-3xl my-8 ">Sparky</div>
+          <div className="text-3xl my-8 ">
+            <a
+              href="https://sparky-9f2fa.web.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Sparky
+            </a>
+          </div>
           <div className="text-lg ">
             Built a user-friendly online store for effortless shopping
             experiences. Enabled secure logins, smooth payments, and order
