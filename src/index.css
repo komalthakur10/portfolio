@@ -21,6 +21,10 @@
   text-shadow: 0px 4px 4px #0099ff;
 }
 
+.text-shadow-dark {
+  text-shadow: 0px 4px 4px #2a5bf8;
+}
+
 .text-gradient {
   background: linear-gradient(45deg, #0099ff, #2c36fc);
   -webkit-background-clip: text;

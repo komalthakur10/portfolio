@@ -1,11 +1,15 @@
 import { FiDownload } from "react-icons/fi";
+import { useSelector } from "react-redux";
+import { rootType } from "../../redux/rootReducer";
 const Home = () => {
+  const { dark } = useSelector((state: rootType) => state.theme);
   const scrollToFooter = () => {
     window.scrollTo({
       top: document.documentElement.scrollHeight,
       behavior: "smooth",
     });
   };
+
   const handleDownloadResume = async () => {
     try {
       const response = await fetch(
@@ -24,11 +28,22 @@ const Home = () => {
       console.error("Error downloading Resume:", error);
     }
   };
+
   return (
-    <div className="border border-[#C7CEFE] rounded-lg p-12 ms-48 me-36 lg:mt-24 lg:mb-28 bg-[#5194ff15] h-[65vh] ">
+    <div
+      className={`border rounded-lg p-12 ms-48 me-36 lg:mt-24 lg:mb-28  h-[65vh] text-[#eaeaf4]  ${
+        dark
+          ? "bg-[#5194ff15] border-[#C7CEFE]"
+          : "bg-[#0406229c] border-[#cccfe2]"
+      }`}
+    >
       <div className=" my-8 px-24 ">
         <div className="text-4xl pb-4 ">I’m</div>
-        <div className="ubuntu-mono-bold text-shadow text-6xl pb-8">
+        <div
+          className={`ubuntu-mono-bold  text-6xl pb-8 ${
+            dark ? "text-shadow" : "text-shadow-dark"
+          }`}
+        >
           Full Stack Developer.
         </div>
         <div className="text-lg">
@@ -47,7 +62,7 @@ const Home = () => {
           Contact
         </button>
         <button
-          className="flex border-b-2 pb-1 hover:border-[#0099ff]"
+          className="flex border-b-2 pb-1 hover:border-[#5860ffda]"
           onClick={() => {
             handleDownloadResume();
           }}

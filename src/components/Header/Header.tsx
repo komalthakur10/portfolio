@@ -21,8 +21,12 @@ const Header = ({
   const dispatch = useDispatch();
   const { dark } = useSelector((state: rootType) => state.theme);
   return (
-    <div className="p-4 border-b px-4 sticky top-0 bg-[#020A20]">
-      <div className="grid lg:grid-cols-2">
+    <div
+      className={`p-4 border-b px-4 sticky top-0 ${
+        dark ? "bg-[#020A20]" : "bg-[#040622c2]"
+      } `}
+    >
+      <div className="grid lg:grid-cols-2 text-white">
         <div
           className="flex cursor-pointer"
           onClick={() => {
@@ -30,13 +34,11 @@ const Header = ({
           }}
         >
           <img
-            className=" w-12"
+            className=" w-12 drop-shadow-lg"
             src="/assets/icons/logo.svg"
             alt="profile-logo"
           />
-          <div className="ubuntu-mono-regular text-2xl pt-1 ps-4 ">
-            Komal Thakur
-          </div>
+          <div className=" text-2xl pt-1 ps-4  ">Komal Thakur</div>
         </div>
         <div className="">
           <div className="grid grid-flow-col gap-8 text-xl pt-2 lg:ms-[15rem]">
