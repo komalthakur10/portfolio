@@ -32,7 +32,11 @@
 }
 
 .image-shadow:hover {
-  filter: drop-shadow(3px 5px 2px #3c44b1);
+  filter: drop-shadow(3px 5px 2px #2d3ae8);
+}
+
+.image-shadow-light:hover {
+  filter: drop-shadow(3px 5px 2px #123cd2);
 }
 
 .image-shadow-lg {

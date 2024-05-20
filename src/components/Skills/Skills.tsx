@@ -1,15 +1,28 @@
 import { MdDoubleArrow } from "react-icons/md";
+import { useSelector } from "react-redux";
+import { rootType } from "../../redux/rootReducer";
 
 const Skills = () => {
+  const { dark } = useSelector((state: rootType) => state.theme);
+  const themeShadow = `${dark ? " image-shadow " : "image-shadow-light "}`;
   return (
     <div className="">
       <div className=" text-4xl pb-8 flex ms-24">
         <MdDoubleArrow className="me-4 mt-1 text-[#4f8aff] " />
         <div>Skills</div>
       </div>
-      <div className="border bg-[#5194ff15] border-[#C7CEFE] rounded-lg py-12  mx-20 my-8">
-        <div className="grid grid-cols-4 text-xl text-center gap-y-10 gap-x-4">
-          <div className="image-shadow">
+      <div
+        className={`border border-[#C7CEFE] rounded-lg py-12  mx-20 my-8 
+       ${
+         dark
+           ? "bg-[#5194ff15] border-[#C7CEFE]"
+           : "bg-[#15183fc1] border-[#cccfe2]"
+       }
+        `}
+        //  bg-${dark ? "[#5194ff15]" : "[#15183fc1]"}
+      >
+        <div className="grid grid-cols-4 text-xl text-center gap-y-10 gap-x-4 text-white">
+          <div className={`${themeShadow}`}>
             <img
               src="assets/icons/react-logo.png"
               alt="react-logo"
@@ -18,7 +31,7 @@ const Skills = () => {
             />
             <div>React</div>
           </div>
-          <div className="image-shadow">
+          <div className={`${themeShadow}`}>
             <img
               src="assets/icons/nest-logo.png"
               alt="nest-logo"
@@ -27,7 +40,7 @@ const Skills = () => {
             />
             <div>Nest.js</div>
           </div>
-          <div className="image-shadow">
+          <div className={`${themeShadow}`}>
             <img
               src="assets/icons/next-logo.png"
               alt="next-logo"
@@ -36,7 +49,7 @@ const Skills = () => {
             />
             <div>Next.js</div>
           </div>
-          <div className="image-shadow">
+          <div className={`${themeShadow}`}>
             <img
               src="assets/icons/react-logo.png"
               alt="react-native-logo"
@@ -45,7 +58,7 @@ const Skills = () => {
             />
             <div>React Native</div>
           </div>
-          <div className="image-shadow">
+          <div className={`${themeShadow}`}>
             <img
               src="assets/icons/express-logo.png"
               alt="express-logo"
@@ -54,7 +67,7 @@ const Skills = () => {
             />
             <div>Express</div>
           </div>
-          <div className="image-shadow">
+          <div className={`${themeShadow}`}>
             <img
               src="assets/icons/python-logo.png"
               alt="python-logo"
@@ -63,7 +76,7 @@ const Skills = () => {
             />
             <div>Python</div>
           </div>
-          <div className="image-shadow">
+          <div className={`${themeShadow}`}>
             <img
               src="assets/icons/aws-logo.png"
               alt="aws-logo"
@@ -72,7 +85,7 @@ const Skills = () => {
             />
             <div>AWS</div>
           </div>
-          <div className="image-shadow">
+          <div className={`${themeShadow}`}>
             <img
               src="assets/icons/gcp-logo.png"
               alt="gcp-logo"

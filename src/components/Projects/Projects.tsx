@@ -1,8 +1,16 @@
+import { useSelector } from "react-redux";
+import { rootType } from "../../redux/rootReducer";
+
 const Projects = () => {
+  const { dark } = useSelector((state: rootType) => state.theme);
   return (
     <div className="pb-8 pt-20">
       <div className="text-3xl my-12 flex justify-center ">
-        <div className="ml-12 border-b pb-2">My Personal Projects</div>
+        <div
+          className={`ml-12 border-b-2 pb-2 ${dark ? "" : " border-black "}`}
+        >
+          My Personal Projects
+        </div>
       </div>
       <div className="grid grid-cols-2 mb-10">
         <div className="mx-10 p-5">
@@ -13,8 +21,9 @@ const Projects = () => {
           >
             <img
               src="assets/images/scape-project-img.png"
-              alt="scape-project-images"
+              alt="scape-project-images "
               loading="lazy"
+              className="drop-shadow-2xl"
             />
           </a>
         </div>
@@ -43,6 +52,7 @@ const Projects = () => {
               href="https://zest-organic.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
+              className="drop-shadow-2xl"
             >
               Zest
             </a>
@@ -80,6 +90,7 @@ const Projects = () => {
               src="assets/images/sparky-project-img.png"
               alt="sparky-project-images"
               loading="lazy"
+              className="drop-shadow-2xl"
             />
           </a>
         </div>
