@@ -42,7 +42,6 @@ const Layout = ({
         dark
           ? `bg-gradient-to-r from-[#1A1B54] via-[#11143F] to-[#020A20] dark:text-white`
           : `bg-gradient-to-r from-[#9ecae8] via-[#90b3ea] to-[#5176d4]`
-        // : `bg-gradient-to-r from-[#9CD2F5] via-[#5D92E8] to-[#1D52DB]`
       }
     >
       <Header
@@ -52,17 +51,21 @@ const Layout = ({
         scrollToSkill={scrollToSkill}
         active={active}
       />
-      <div className="grid grid-cols-12">
-        <div className="col-span-11">{children}</div>
-        <CustomNavigation
-          scrollToHome={scrollToHome}
-          scrollToAbout={scrollToAbout}
-          scrollToProject={scrollToProject}
-          scrollToSkill={scrollToSkill}
-          active={active}
-        />
+      <div className=" max-w-[1480px] mx-auto">
+        <div className="grid grid-cols-11 lg:grid-cols-12">
+          <div className="col-span-12 lg:col-span-11">{children}</div>
+          <div className="lg:col-span-1 hidden md:block">
+            <CustomNavigation
+              scrollToHome={scrollToHome}
+              scrollToAbout={scrollToAbout}
+              scrollToProject={scrollToProject}
+              scrollToSkill={scrollToSkill}
+              active={active}
+            />
+          </div>
+        </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
