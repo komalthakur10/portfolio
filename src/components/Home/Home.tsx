@@ -49,7 +49,7 @@ const Home = () => {
           >
             Full Stack Developer.
           </div>
-          <div className="md:text-lg lg:text-base xl:text-lg 3xl:text-xl 3xl:pt-6 pt-[2rem]">
+          <div className="md:text-lg lg:text-base xl:text-lg 3xl:text-xl 3xl:pt-6 pt-[2rem] 3xl:pt-[3rem]">
             "Skilled Full Stack Developer with expertise in React, Nest.js, and
             Next.js. Dedicated to delivering top-notch solutions through careful
             coding and continuous learning."

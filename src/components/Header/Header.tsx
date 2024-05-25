@@ -3,6 +3,9 @@ import { rootType } from "../../redux/rootReducer";
 import { setTheme } from "../../redux/reducer/themeReducer";
 import { MdLightMode } from "react-icons/md";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { useState } from "react";
+import { IoMdClose } from "react-icons/io";
+import { MdNightlight } from "react-icons/md";
 
 interface HeaderProps {
   scrollToHome: Function;
@@ -21,6 +24,7 @@ const Header = ({
 }: HeaderProps) => {
   const dispatch = useDispatch();
   const { dark } = useSelector((state: rootType) => state.theme);
+  const [mobileMenu, setMobileMenu] = useState(false);
   return (
     <div
       className={`z-10 p-4 border-b sticky top-0 ${
@@ -42,10 +46,10 @@ const Header = ({
             />
             <div className="text-xl xl:text-2xl pt-1 ps-4  ">Komal Thakur</div>
           </div>
-          <div className="hidden lg:block">
-            <div className="grid grid-flow-col lg:gap-4 2xl:gap-8 md:text-md xl:text-xl pt-2 ms-24 2xl:ms-[15rem]">
+          <div className={`${mobileMenu ? "" : "hidden"} lg:block`}>
+            <div className="grid lg:grid-flow-col lg:gap-4 2xl:gap-8 md:text-md xl:text-xl pt-2 lg:ms-24 2xl:ms-[15rem]">
               <div
-                className={`text-center xl:pb-1 hover:border-b-2 hover:border-[#52d3e4] ${
+                className={` xl:pb-1 hover:border-b-2 hover:border-[#52d3e4] mx-auto ${
                   active === "Home" ? " border-b-2 border-[#52d3e4]  " : ""
                 }`}
                 onClick={() => {
@@ -55,7 +59,7 @@ const Header = ({
                 Home
               </div>
               <div
-                className={`text-center xl:pb-1 hover:border-b-2 hover:border-[#52d3e4] ${
+                className={`text-center xl:pb-1 hover:border-b-2 hover:border-[#52d3e4] mx-auto ${
                   active === "About" ? " border-b-2 border-[#52d3e4]  " : ""
                 }`}
                 onClick={() => {
@@ -65,38 +69,67 @@ const Header = ({
                 About
               </div>
               <div
-                className={`text-center xl:pb-1 hover:border-b-2 hover:border-[#52d3e4] ${
+                className={` xl:pb-1 hover:border-b-2 hover:border-[#52d3e4] mx-auto ${
                   active === "Project" ? " border-b-2 border-[#52d3e4]  " : ""
                 }`}
                 onClick={() => {
                   scrollToProject();
+                  setMobileMenu(false);
                 }}
               >
                 Projects
               </div>{" "}
               <div
-                className={`text-center xl:pb-1 hover:border-b-2 hover:border-[#52d3e4] ${
+                className={` xl:pb-1 hover:border-b-2 hover:border-[#52d3e4] mx-auto ${
                   active === "Skill" ? " border-b-2 border-[#52d3e4]  " : ""
                 }`}
                 onClick={() => {
                   scrollToSkill();
+                  setMobileMenu(false);
                 }}
               >
                 Skills
               </div>
               <div
-                className="rounded-full bg-white hover:bg-black hover:border w-8 h-8 md:p-2 xl:p-[6px]"
+                className={`lg:hidden xl:pb-1 hover:border-b-2 hover:border-[#52d3e4] mx-auto ${
+                  active === "Skill" ? " border-b-2 border-[#52d3e4]  " : ""
+                }`}
                 onClick={() => {
                   dispatch(setTheme(!dark));
+                  setMobileMenu(false);
                 }}
               >
-                <MdLightMode className="text-black hover:text-white" />
+                {dark ? "Light Theme" : "Dark Theme"}
+              </div>
+              <div
+                className={`hidden lg:block rounded-full w-8 h-8 md:p-2 xl:p-[6px] ${
+                  dark ? " bg-white" : " bg-black"
+                }`}
+                onClick={() => {
+                  dispatch(setTheme(!dark));
+                  setMobileMenu(false);
+                }}
+              >
+                {dark ? (
+                  <MdLightMode className="text-black" />
+                ) : (
+                  <MdNightlight className="text-white" />
+                )}
               </div>
             </div>
           </div>
         </div>
-        <div className="lg:hidden">
-          <GiHamburgerMenu className="w-6 h-6 md:ms-4 mt-1" />
+        <div
+          className="lg:hidden"
+          onClick={() => {
+            setMobileMenu(!mobileMenu);
+          }}
+        >
+          {mobileMenu ? (
+            <IoMdClose className=" text-white w-6 h-6 md:ms-4 mt-1" />
+          ) : (
+            <GiHamburgerMenu className=" text-white w-6 h-6 md:ms-4 mt-1" />
+          )}
         </div>
       </div>
     </div>

@@ -36,7 +36,9 @@ const Projects = () => {
               rel="noopener noreferrer"
             >
               <div className="flex">
-                <FaAngleDoubleRight className="me-4 mt-1 text-[#50c7dc]" />
+                <FaAngleDoubleRight
+                  className={`me-4 mt-1 text-${dark ? "[#50c7dc]" : "black"} `}
+                />
                 Scape
               </div>
             </a>
@@ -65,7 +67,9 @@ const Projects = () => {
                 className="drop-shadow-2xl transform transition-transform duration-500 hover:scale-125 lg:hidden mb-10 px-5"
               />
               <div className="flex">
-                <FaAngleDoubleRight className="me-4 mt-1 text-[#50c7dc]" />
+                <FaAngleDoubleRight
+                  className={`me-4 mt-1 text-${dark ? "[#50c7dc]" : "black"} `}
+                />
                 Zest
               </div>
             </a>
@@ -116,7 +120,9 @@ const Projects = () => {
               rel="noopener noreferrer"
             >
               <div className="flex">
-                <FaAngleDoubleRight className="me-4 mt-1 text-[#50c7dc]" />
+                <FaAngleDoubleRight
+                  className={`me-4 mt-1 text-${dark ? "[#50c7dc]" : "black"} `}
+                />
                 Sparky
               </div>
             </a>
