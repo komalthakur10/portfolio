@@ -37,6 +37,7 @@ const Header = ({
             className="flex cursor-pointer"
             onClick={() => {
               scrollToHome();
+              setMobileMenu(false);
             }}
           >
             <img
@@ -54,6 +55,7 @@ const Header = ({
                 }`}
                 onClick={() => {
                   scrollToHome();
+                  setMobileMenu(false);
                 }}
               >
                 Home
@@ -64,6 +66,7 @@ const Header = ({
                 }`}
                 onClick={() => {
                   scrollToAbout();
+                  setMobileMenu(false);
                 }}
               >
                 About
