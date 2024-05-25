@@ -1,4 +1,3 @@
-import { FiDownload } from "react-icons/fi";
 import { useSelector } from "react-redux";
 import { rootType } from "../../redux/rootReducer";
 const Home = () => {
@@ -8,25 +7,6 @@ const Home = () => {
       top: document.documentElement.scrollHeight,
       behavior: "smooth",
     });
-  };
-
-  const handleDownloadResume = async () => {
-    try {
-      const response = await fetch(
-        "https://drive.google.com/file/d/1M3Kwqp0wN_skq4PHKEkehwVJo45mYUhv/view?usp=sharing"
-      );
-      const blob = await response.blob();
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = "KomalThakur_Resume.pdf";
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
-    } catch (error) {
-      console.error("Error downloading Resume:", error);
-    }
   };
 
   return (
@@ -49,7 +29,7 @@ const Home = () => {
           >
             Full Stack Developer.
           </div>
-          <div className="md:text-lg lg:text-base xl:text-lg 3xl:text-xl 3xl:pt-6 pt-[2rem] 3xl:pt-[3rem]">
+          <div className="md:text-lg lg:text-base xl:text-lg 3xl:text-xl pt-[2rem] 3xl:pt-[3rem]">
             "Skilled Full Stack Developer with expertise in React, Nest.js, and
             Next.js. Dedicated to delivering top-notch solutions through careful
             coding and continuous learning."
