@@ -10,25 +10,27 @@ const About = () => {
   const themeColor = `${dark ? "[#4f8aff] " : "black"}`;
   return (
     <div className="py-4">
-      <div className="grid grid-cols-2 mt-24 mb-10 h-[60vh]">
+      <div className="grid lg:grid-cols-2 lg:mt-24 mb-10 lg:h-[60vh]">
         <div className="">
           <img
-            className={`w-4/5 mx-auto ${dark ? "" : "image-shadow-lg"}`}
+            className={`bg-[#262567] rounded-xl w-4/5 mx-auto ${
+              dark ? "" : "image-shadow-lg"
+            }`}
             src="/assets/images/about-img.svg"
             alt="girl coding"
           />
         </div>
-        <div className="px-28 mt-10">
-          <div className=" text-4xl pb-8 flex">
+        <div className=" px-6 lg:px-28 mt-10">
+          <div className="text-3xl lg:text-4xl  flex border-b pb-4 ">
             <MdDoubleArrow className={`me-4 mt-1 text-${themeColor} `} />
-            <div>About Me</div>
+            <div className="">About Me</div>
           </div>
-          <div className="text-xl ps-4">
+          <div className="lg:text-xl ps-4 pt-8">
             I'm Komal Thakur, an skilled Full Stack Developer passionate about
-            new technologies. With 1 year of experience in technologies like
-            React , Nest.js, and Next.js, I thrive on solving complex challenges
-            through code. I value continuous learning, teamwork, and effective
-            communication to deliver high-quality solutions.
+            learning new technologies. With 1 year of experience in technologies
+            like React , Nest.js, and Next.js, I thrive on solving complex
+            challenges through code. I value continuous learning, teamwork, and
+            effective communication to deliver high-quality solutions.
           </div>
           <div className="flex ps-3 mt-4">
             <a
@@ -43,7 +45,9 @@ const About = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <SiLinkedin className={` text-${themeColor} w-6 h-6 mt-1 me-6`} />
+              <SiLinkedin
+                className={` text-${themeColor} w-6 h-6 mt-1 me-6 `}
+              />
             </a>
             <a
               href="https://github.com/komalthakur10"

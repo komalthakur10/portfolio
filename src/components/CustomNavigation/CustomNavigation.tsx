@@ -19,7 +19,7 @@ const CustomNavigation = ({
   const { dark } = useSelector((state: rootType) => state.theme);
   return (
     <div className=" fixed md:right-10 xl:right-16">
-      <div className="flex justify-center md:mt-24 xl:mt-16 2xl:mt-[12rem] 3xl:mt-[15rem] ">
+      <div className="flex justify-center md:mt-24 xl:mt-[10rem] 2xl:mt-[12rem] 3xl:mt-[15rem] ">
         <div>
           <div
             className={
