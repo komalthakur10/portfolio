@@ -13,14 +13,14 @@ const About = () => {
       <div className="grid lg:grid-cols-2 lg:mt-24 mb-10 lg:h-[60vh]">
         <div className="">
           <img
-            className={`bg-[#262567] rounded-xl w-4/5 mx-auto ${
+            className={`bg-[#262567] rounded-xl w-4/5 mx-auto  ${
               dark ? "" : "image-shadow-lg"
             }`}
             src="/assets/images/about-img.svg"
             alt="girl coding"
           />
         </div>
-        <div className=" px-6 lg:px-28 mt-10">
+        <div className=" px-6 mt-10">
           <div className="text-3xl lg:text-4xl  flex border-b pb-4 ">
             <MdDoubleArrow className={`me-4 mt-1 text-${themeColor} `} />
             <div className="">About Me</div>
@@ -32,7 +32,7 @@ const About = () => {
             challenges through code. I value continuous learning, teamwork, and
             effective communication to deliver high-quality solutions.
           </div>
-          <div className="flex ps-3 mt-4">
+          <div className="flex ps-3 mt-8">
             <a
               href="mailto:komalthakur100400@gmail.com"
               target="_blank"
