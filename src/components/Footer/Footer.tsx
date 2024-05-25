@@ -9,14 +9,14 @@ const Footer = () => {
   return (
     <div className="mx-10 py-12">
       <div
-        className={`grid grid-cols-3 border-2  px-10 py-6 rounded-xl text-white bg-${themeColor} shadow-md  shadow-[rgba(44,54,252,0.41)] `}
+        className={`grid lg:grid-cols-3 border-2  lg:px-10 py-6 rounded-xl text-white bg-${themeColor} shadow-md  shadow-[rgba(44,54,252,0.41)] `}
       >
         <a
           href="mailto:komalthakur100400@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <div className="flex justify-center">
+          <div className="flex p-4 lg:p-0 lg:justify-center">
             <IoMdMail className=" text-[#4f8aff] w-14 h-10 me-4" />
             <div className="pt-2">komalthakur100400@gmail.com</div>
           </div>
@@ -26,9 +26,9 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <div className="flex justify-center">
+          <div className="flex ps-7 lg:p-0 lg:justify-center">
             <SiLinkedin className=" text-[#4f8aff] w-8 h-8 mt-1 me-6" />
-            <div className="pt-2">komal-thakur-40ab06237</div>
+            <div className="pt-2 ps-1">komal-thakur-40ab06237</div>
           </div>
         </a>
         <a
@@ -36,9 +36,9 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <div className="flex justify-center">
+          <div className="flex ps-7 pt-4 lg:p-0 lg:justify-center">
             <IoLogoGithub className=" text-[#4f8aff] w-9 h-10 " />
-            <div className="pt-2 ps-5">komalthakur10</div>
+            <div className="pt-2 ps-6">komalthakur10</div>
           </div>
         </a>
       </div>

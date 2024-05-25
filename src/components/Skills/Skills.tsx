@@ -7,21 +7,20 @@ const Skills = () => {
   const themeShadow = `${dark ? " image-shadow " : "image-shadow-light "}`;
   return (
     <div className="">
-      <div className=" text-4xl pb-8 flex ms-24">
+      <div className="text-3xl lg:text-4xl lg:pb-8 flex ms-8 lg:ms-24 ">
         <MdDoubleArrow className="me-4 mt-1 text-[#4f8aff] " />
         <div>Skills</div>
       </div>
       <div
-        className={`border border-[#C7CEFE] rounded-lg py-12  mx-20 my-8 
+        className={`border border-[#C7CEFE] rounded-lg py-12 mx-8 lg:mx-20 my-8 
        ${
          dark
            ? "bg-[#5194ff15] border-[#C7CEFE]"
            : "bg-[#15183fc1] border-[#cccfe2]"
        }
         `}
-        //  bg-${dark ? "[#5194ff15]" : "[#15183fc1]"}
       >
-        <div className="grid grid-cols-4 text-xl text-center gap-y-10 gap-x-4 text-white">
+        <div className="grid grid-cols-2 lg:grid-cols-4 text-xl text-center gap-y-10 gap-x-4 text-white">
           <div className={`${themeShadow}`}>
             <img
               src="assets/icons/react-logo.png"

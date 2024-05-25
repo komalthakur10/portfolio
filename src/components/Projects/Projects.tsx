@@ -5,7 +5,7 @@ import { FaAngleDoubleRight } from "react-icons/fa";
 const Projects = () => {
   const { dark } = useSelector((state: rootType) => state.theme);
   return (
-    <div className="pb-8 pt-20">
+    <div className="pb-8 lg:pt-20">
       <div className="text-3xl my-12 flex justify-center ">
         <div
           className={`lg:ml-12 border-b-2 pb-2 ${dark ? "" : " border-black "}`}
@@ -24,7 +24,7 @@ const Projects = () => {
               src="assets/images/scape-project-img.png"
               alt="scape-project-images "
               loading="lazy"
-              className="drop-shadow-2xl transform transition-transform duration-500 hover:scale-125"
+              className="drop-shadow-2xl transform transition-transform duration-500 hover:scale-125 pt-8 lg:pt-0"
             />
           </a>
         </div>
