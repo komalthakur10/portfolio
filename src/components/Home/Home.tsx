@@ -64,14 +64,14 @@ const Home = () => {
           >
             Contact
           </button>
-          <button
-            className="flex border-b-2 pb-1 hover:border-[#5860ffda]"
-            onClick={() => {
-              handleDownloadResume();
-            }}
-          >
-            <span className=" me-2">Resume</span>
-            <FiDownload className="mt-1" />
+          <button className=" rounded-lg px-4 2xl:px-6 py-1 me-8 bg-gradient-to-b from-[#4f8aff] to-[#2c36fc] hover:shadow-lg hover:shadow-[#2c36fcd8]  hover:border">
+            <a
+              href="https://drive.google.com/file/d/1Zeb08ut9BsZWADjy7p666flGn34r3Cf9/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Resume
+            </a>
           </button>
         </div>
       </div>
