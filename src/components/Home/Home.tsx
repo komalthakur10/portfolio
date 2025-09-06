@@ -46,7 +46,7 @@ const Home = () => {
           </button>
           <button className=" rounded-lg px-4 2xl:px-6 py-1 me-8 bg-gradient-to-b from-[#4f8aff] to-[#2c36fc] hover:shadow-lg hover:shadow-[#2c36fcd8]  hover:border">
             <a
-              href="https://drive.google.com/file/d/1Zeb08ut9BsZWADjy7p666flGn34r3Cf9/view?usp=sharing"
+              href="https://drive.google.com/file/d/1PSV7i4G7Pjf0cE85emCyVnbHMvzvDfcI/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
             >
