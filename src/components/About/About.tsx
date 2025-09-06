@@ -27,10 +27,11 @@ const About = () => {
           </div>
           <div className="lg:text-xl ps-4 pt-8">
             I'm Komal Thakur, an skilled Full Stack Developer passionate about
-            learning new technologies. With 1 year of experience in technologies
-            like React , Nest.js, and Next.js, I thrive on solving complex
-            challenges through code. I value continuous learning, teamwork, and
-            effective communication to deliver high-quality solutions.
+            learning new technologies. With almost 3 years of experience in
+            technologies like React, Nest.js, and Next.js. I thrive on solving
+            complex challenges through code. I value continuous learning,
+            teamwork, and effective communication to deliver high-quality
+            solutions.
           </div>
           <div className="flex ps-3 mt-8">
             <a
